@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>
+      person
+    </title>
+    <meta charset='utf-8' />
+    <link href='css/index.css' rel='stylesheet' />
+  </head>
+
+{{> nav}}
+
+<div>
+  {{#with person}} 
+  {{#with name}}
+  <h1> {{firstname}} {{lastname}}</h1>  
+ </div>
+{{/with}}
+
+<hr>
+<div>
+{{#with personinfo}}
+<b>age: {{age}} <br>
+gender: {{gender}}</b>
+{{/with}}
+<hr>
+{{#with address}}
+</div>
+<b>
+  <div>  <br>
+  street: {{street}} <br>
+  city: {{city}} <br>
+  state: {{state}} <br>
+  zip: {{zip}} <br>
+  country: {{country}} <br>
+</b>
+</div>
+
+<hr>
+<div>
+{{/with}}
+
+{{#with educationinfo}}
+{{#with education}}
+<b>
+  <div>
+  degree: {{degree}} <br>
+  major: {{major}} <br>
+  university: {{university}} <br>
+  graduationYear: {{graduationYear}} <br>
+  </div>
+</b>
+{{/with}}
+</div>
+<hr>
+{{/with}}
+
+{{#with workExperience}}
+{{#with workExperienceinfo}}
+<b>
+  <br>
+  company: {{company}} <br>
+  title: {{title}} <br>
+  startDate: {{startDate}} <br>
+  endDate: {{endDate}} <br>
+  responsibilities: {{responsibilities}} <br>
+  year_founded: {{year_founded}} <br>
+  industry: {{industry}} <br>
+  {{/with}}
+</b>
+<hr>
+<div>
+  <ul>
+       </h2>Employees</h2>
+           
+    <li>
+        {{#with employees}}
+       {{#with employeesinfo}}
+       name: {{name}} <br>   
+     {{/with}}
+
+  </li>
+ 
+
+  
+</ul>
+
+
+
+<ul>
+  <li>
+
+  </li>
+</ul>
+{{/with}}
+</div>
+
+{{/with}}
+
+
+{{/with}}
+
+
+
+
+  
+
+  <body>
+    
+      
+    {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   --}}
+    {{{body}}}
+
+  
+  </body>
+
+ 
+
+</html>
