@@ -304,12 +304,14 @@ router.get('/person', function (req, res) {
               name: 'John Smith',
               position: 'CEO',
               department: 'Executive',
-              projects: [
-                {
+
+              projects: {
+                projectsinfo: {
                   name: 'Project Alpha',
                   description:
                     'Developing new software platform',
                   status: 'In Progress',
+
                   teams: [
                     {
                       team_name: 'Awesome Team',
@@ -325,6 +327,7 @@ router.get('/person', function (req, res) {
                           email:
                             'alice.johnson@example.com',
                           skills: ['Java', 'Python', 'SQL'],
+
                           projects: [
                             {
                               name: 'Project A',
@@ -352,7 +355,7 @@ router.get('/person', function (req, res) {
                     },
                   ],
                 },
-              ],
+              },
             },
           },
         },
@@ -372,7 +375,10 @@ router.get('/bio', function (req, res) {
     layout: 'bio',
 
     bio: {
-      name: 'Albert Einstein',
+      name: {
+        firstname: 'Albert',
+        lastname: 'Einstein',
+      },
       birthdate: 'March 14, 1879',
       birthplace:
         'Ulm, Kingdom of Württemberg, German Empire',

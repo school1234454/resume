@@ -1,12 +1,51 @@
-
-
-<div>
-    
-   {{#with bio}}
-   <div>
-    {{name}}
-   </div>
+<body>
+{{#with bio}}
+   <b>Education{{#each education}}</b>
+   <li>Degree: {{degree}}</li>
+   <li>field: {{field}}</li>
+   <li>institution: {{institution}}</li>
+   <li>year: {{year}}</li>
+   {{/each}}
+<br>
+<hr>
+      <b>Notable publications {{#each notable_publications}}</b>
+                              <li>Title: {{title}}</li>
+                              <li>Year: {{year}}</li>
+                              <li>Publisher: {{publisher}}</li>
+                              {{/each}}
+<hr>
+<br>
+          <b>Partners {{#each partners}}</b>
+             <li>name: {{name}}</li>
+             <li>relationship: {{relationship}}</li>
+             <li>years: {{years}}</li> <br>
+                       {{/each}}
+<hr>
+               <b>Awards {{#each awards}}</b>
+               <li>Title: {{title}}</li>
+               <li>Year: {{year}}</li>
+               <li>Description: {{description}}</li> <br>
+               {{/each}}
+<hr>               
+         <b>Influences: {{#each influences}}</b>
+                     <li>{{this}}</li>
+                        {{/each}}
+<br>                        
+                 <b>Influenced: {{#each influenced}}</b>
+                 <li>{{this}}</li>
+                 {{/each}}
+<br>
+               <b>Quotes: {{#each quotes}}</b>
+               <li>{{this}}</li>
+               {{/each}}
+<br>
+      <b>Major discoveries: {{#each major_discoveries}}</b>
+                  <li>Title:{{title}}</li>
+                  <li>Year:{{year}}</li>
+                  <li>Description:{{description}}</li>
+                      {{/each}}
+<br>                      
+      <b>Contributions: {{#each contributions}}</b>
+                   <li>{{this}}</li>
+                      {{/each}}
 {{/with}}
-
-</div>
-
