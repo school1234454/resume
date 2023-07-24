@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>
+      person
+    </title>
+    <meta charset='utf-8' />
+    <link href='css/index.css' rel='stylesheet' />
+  </head>
+
+{{> nav}}
+
+<div>
+  {{#with person}} 
+  {{#with name}}
+  <h1> {{firstname}} {{lastname}}</h1>  
+ </div>
+{{/with}}
+
+<hr>
+<div>
+{{#with personinfo}}
+<b>age: {{age}} <br>
+gender: {{gender}}</b>
+{{/with}}
+<hr>
+{{#with address}}
+</div>
+<b>
+  <div>  <br>
+  street: {{street}} <br>
+  city: {{city}} <br>
+  state: {{state}} <br>
+  zip: {{zip}} <br>
+  country: {{country}} <br>
+</b>
+</div>
+
+<hr>
+<div>
+{{/with}}
+
+{{#with educationinfo}}
+{{#with education}}
+<b>
+  <div>
+  degree: {{degree}} <br>
+  major: {{major}} <br>
+  university: {{university}} <br>
+  graduationYear: {{graduationYear}} <br>
+  </div>
+</b>
+{{/with}}
+</div>
+<hr>
+{{/with}}
+
+  {{/with}}
+
+  <body>
+         
+    {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   --}}
+    {{{body}}}
+  
+  </body>
+ </html>

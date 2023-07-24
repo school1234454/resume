@@ -1,0 +1,81 @@
+
+<body>
+{{#with person}}   
+   <h2>Work Experience{{#with workExperience.workExperienceinfo}}</h2>
+                  Company: {{company}}<br>
+                  Title: {{title}}<br>
+                  Start Date: {{startDate}}<br>
+                  End Date: {{endDate}}<br>
+    
+  
+   <h3>Responsibilities:{{#each responsibilities}}</h3>
+                   <li>{{this}}</li>
+                       {{/each}}
+<br>
+      Year Founded: {{year_founded}}<br>
+      Industry: {{industry}}<br>
+<hr>   
+   <h2>Employees{{#with employees.employeesinfo}}</h2>
+            Name: {{name}}<br>
+            Position: {{position}}<br>
+            Department: {{department}}<br>                       
+<hr>
+   <h2>Projects {{#with projects.projectsinfo}}</h2>
+      Name: {{name}}<br>
+      Description: {{description}}<br>
+      Status: {{status}}<br>
+      <hr>
+      
+   <h2>Teams{{#each teams}}</h2>
+               <strong>Team Name: {{team_name}}</strong><br>
+               Team Leader: {{team_leader.name}}<br>
+               Title: {{team_leader.title}}<br>
+               <p>Email: <a href="mailto:{{team_leader.email}}">{{team_leader.email}}</a></p>
+<hr>          
+   <h2>Team Members{{#each team_members}}</h2>
+      Name: {{name}}<br>
+      Title: {{title}}<br>
+      Email: <a href="mailto:{{email}}">{{email}}</a><br>
+<br>
+      Skills:{{#each skills}}
+      <li>{{this}}</li>
+      {{/each}}
+<hr>
+<br>     
+         <b> Projects </b>{{#each projects}} <br>
+                   Name: {{name}} <br>
+          Description: {{description}} <br>
+<br>
+       <b>  Technologies</b> {{#each technologies}}
+                             <li>{{this}}</li>
+                             {{/each}}
+<br>
+      <b> Team members</b> {{#each team_members}}<br>
+                        <li>Name: {{name}}</li> 
+                        <li>Title: {{title}}</li>
+                           {{/each}}         
+                  {{/each}}
+               {{/each}}
+            {{/each}}
+         {{/with}}
+      {{/with}}
+   {{/with}}
+{{/with}}
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

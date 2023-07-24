@@ -1,0 +1,46 @@
+{{!-- 
+  Це леяут по замовчюванню, котрий вже містить базову структуру HTML документа
+  І котрий обгортає код container файлів для будь-яких ендпоїнтів
+--}}
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>
+      bio
+    </title>
+    <meta charset='utf-8' />
+    <link href='css/index.css' rel='stylesheet' />
+
+    {{> nav}}
+  </head>
+  <header>
+      {{#with bio}}
+     {{#with name}}
+    <h1> {{firstname}} {{lastname}}</h1>
+        {{/with}}
+        <ul>
+    </li>Birthdate: {{birthdate}}</li></b> <br>
+    </li>Birthplace: {{birthplace}}</li></b> <br>
+    </li>Deathdate: {{deathdate}}</li></b> <br>
+    </li>Deathplace: {{deathplace}}</li></b> <br>
+    </li>Nationality: {{nationality}}</li></b> <br>
+    </li>Occupation: {{occupation}}</li></b> <br>
+        </ul>
+     <b>Known for {{#each known_for}}</b>
+              <li>{{this}}</li>
+                  {{/each}}
+<br>
+<hr>
+    {{/with}}
+    </header>
+
+  
+
+  <body>       
+        
+    {{{body}}} 
+  </body>
+
+ 
+
+</html>
