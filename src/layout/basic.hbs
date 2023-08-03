@@ -12,8 +12,9 @@
     <link href='css/index.css' rel='stylesheet' />
 
     {{> nav}}
-  
-<header>
+ 
+<head>
+  {{#with headerjs}}
 <h1>{{name}}</h1>
 <br>
 <b>{{description}}</b>
@@ -23,9 +24,11 @@
 <li>year: {{year}}</li>
 <li>founder: {{founder}}</li>
 {{/with}}
+{{/with}}
 <hr>
 
-</header>
+
+</head>
 
       <body>       
     {{{body}}} 
