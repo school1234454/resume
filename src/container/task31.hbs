@@ -1,0 +1,225 @@
+<body>
+  <nav>  
+                    {{#with navigation}}                   
+                    {{#each links}} 
+                <a class="col-4 " href="{{href}}">{{text}}</a>
+                {{/each}}
+
+         {{#with button}}
+              <a class=" btn btn-primary" href="{{href}}">{{text}}</a>
+            {{/with}} 
+          {{/with}}       
+  
+    </nav>
+    <br>
+    <hr>
+
+  {{#with header}}
+<h1>{{title}}</h1>
+<p>{{description}}</p>
+      {{#with button}}
+      <a class="btn btn-primary" href="{{link}}">{{text}}</a>
+      {{/with}}
+{{/with}}
+<br>
+<hr>
+
+
+        {{#with city}}
+              <h2 >{{title}}</h2>
+             
+<section class="card">
+  <div class="row">
+    <div>
+               {{#each cards}}          
+              {{#with picture}}
+              <img src="{{src}}" alt="{{alt}}">
+              {{/with}}            
+                 <h4>{{title}}</h4>
+                <p>{{description}}</p>
+              <div>
+                  {{#with button}}
+                  <a class="btn btn-info" href="{{link}}">{{text}}</a>
+                  {{/with}}
+              </div>
+                {{/each}}
+                </div>
+</div>
+</section>
+ {{/with}}
+<br>
+<hr>
+<br>
+<br>
+
+<table class="table">
+  <thead>
+    {{#with winner}}
+    <tr>
+      <th>
+        <h2>{{title}}</h2>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        {{#with table}}
+        {{#each head}}
+        {{this}}
+        {{/each}}
+      </th>
+            <th>
+              {{#each user}}
+                <td>{{place}}</td>
+                <td>{{name}}</td>
+                <td>{{surname}}</td>
+                <td>{{nickname}}</td>
+           
+              {{/each}}
+             {{/with}}
+          </th>
+   </tr>
+          {{/with}}
+  </thead>
+
+
+  {{!-- //================ --}}
+  
+
+<table class="table">
+  <thead>
+    {{#with gallery}}
+    <tr>
+      <th>
+        <h2>{{title}}</h2>
+      </th>
+    </tr>
+    <tr>
+      <th>
+      {{#each cards}}
+          <td>{{name}}</td>
+        <td>{{#each items}}
+          {{this}}
+          {{/each}}</td>
+      {{/each}}
+            </th>
+    </tr>
+    {{/with}}
+  </thead>
+</table>
+{{!-- //================ --}}
+
+
+<table class="table">
+  <thead>
+    {{#with relaxion}}
+    <tr>
+      <th>
+        <div class="display-3">{{title}}</div>
+      </th>
+    </tr>
+    <tr>
+      
+        <th>{{#each cards}}
+        <td>{{header}}</td>
+        <td>{{title}}</td>
+        <td>{{description}}</td>
+        {{/each}}</th>
+      
+    </tr>
+    {{/with}}
+  </thead>
+</table>
+
+{{!-- //================ --}}
+
+<table class="table">
+  <thead>
+    {{#with rest}}
+    
+    <tr>
+
+      <th>{{#each cards}}
+      <td>{{header}}</td>
+      <td>{{title}}</td>
+      <td>{{description}}</td>
+      {{/each}}</th>
+
+    </tr>
+    {{/with}}
+  </thead>
+</table>
+
+{{!-- //================ --}}
+  
+<table class="table">
+  <thead>
+    {{#with proposition}}
+    <tr>
+      <th>
+        <div class="display-2">{{title}}</div>
+      </th>
+    </tr>
+    <tr>
+
+      <th>{{#each cards}}
+      <td>{{header}}</td>
+      <td>{{title}}</td>
+      <td>{{description}}</td>
+      {{/each}}</th>
+
+    </tr>
+    {{/with}}
+  </thead>
+</table>
+
+{{!-- //================ --}}
+
+<table class="table">
+  <thead>
+    {{#with footer}}
+    <tr>
+      <th>
+        <h5>{{title}}</h5>
+      </th>
+    </tr>
+    <tr>
+      <th>{{#each navigation}}
+        <a class="btn btn-info" href="{{href}}">{{text}}</a>
+              {{/each}}</th>
+    </tr>
+<tr>
+    <th>{{#each socialMedia}}
+      <a class="btn btn-info" href="{{link}}">{{name}}</a>
+      {{/each}}
+    </th>
+</tr>
+
+<tr>
+  <th>{{#each partners}}
+    <a class="btn btn-info" href="{{link}}">{{name}}</a>
+    {{/each}}
+  </th>
+</tr>  
+
+    {{/with}}
+  </thead>
+</table>
+           
+
+                  
+                   
+                   
+                    
+                  
+                  
+           
+          
+
+
+
+
+
+
+
+
+</body>
