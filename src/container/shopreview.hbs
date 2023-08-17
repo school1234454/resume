@@ -1,0 +1,130 @@
+<body>
+    <div class="card">
+        <h2>{{formBlock.header}}</h2>
+        <div>
+            <p>{{formBlock.rating.title}}: {{formBlock.rating.value}}</p>
+        </div>
+        <div>
+            <ul class="nav nav-tabs">
+                {{#each formBlock.actionBlock.tabs}}
+                <li class="nav-item">
+                    <a class="nav-link {{#if isActive}}active{{/if}}" href="#">{{text}}</a>
+                </li>
+                {{/each}}
+            </ul>
+            <div>
+                <h3>{{formBlock.actionBlock.report.title}}</h3>
+                <a href="{{formBlock.actionBlock.report.button.link}}"
+                    class="btn btn-primary">{{formBlock.actionBlock.report.button.text}}</a>
+            </div>
+        </div>
+        <div>
+            <h3>{{formBlock.feedbackBlock.title}}</h3>
+            <div>
+                {{#each formBlock.feedbackBlock.buttons}}
+                <a href="{{link}}"
+                    class="btn {{#if isWarning}}btn-warning{{/if}}{{#if isSuccess}}btn-success{{/if}}{{#if isDanger}}btn-danger{{/if}}">{{text}}</a>
+                {{/each}}
+            </div>
+        </div>
+        <div class="card col-2 md-2">
+            <div class="card-body">
+                <div>
+                    <img src="{{formBlock.goodsInfo.photo}}" alt="{{formBlock.goodsInfo.name}}" class="card-img">
+                </div>
+                <h3 class="card-title">{{formBlock.goodsInfo.name}}</h3>
+                <p class="card-text">{{formBlock.goodsInfo.price}}</p>
+                <p class="card-text">{{#if formBlock.goodsInfo.inMarket}}In Market{{else}}Out of Market{{/if}}</p>
+                <div class="goods-buttons">
+                    {{#each formBlock.goodsInfo.buttons}}
+                    <a href="{{link}}"
+                        class="btn {{#if isPrimary}}btn-primary{{/if}}{{#if isSecondary}}btn-secondary{{/if}}">{{text}}</a>
+                    {{/each}}
+                </div>
+                <p class="card-text">{{formBlock.goodsInfo.seller.title}}: {{formBlock.goodsInfo.seller.value}}</p>
+            </div>
+        </div>
+        
+
+    </div>
+
+<hr class="my-5">
+
+<div class="card">
+    {{#each reviewList}}
+    <div class="review">
+        <div class="review-title">
+            <h3>{{title.userName}}</h3>
+            <p>{{title.caption}}</p>
+            <p>{{title.date}}</p>
+        </div>
+        <div class="card">
+            <div class="seller-info">
+                <p>{{reviewBody.seller.title}}: {{reviewBody.seller.value}}</p>
+            </div>
+            <div>
+                <p>{{reviewBody.rating.title}}: {{reviewBody.rating.value}}</p>
+            </div>
+            <div>
+                {{#each reviewBody.text}}
+                <p>{{this}}</p>
+                {{/each}}
+            </div>
+            <div>
+                <p>{{reviewBody.advantages.title}}: {{reviewBody.advantages.text}}</p>
+            </div>
+            <div class="disadvantages">
+                <p>{{reviewBody.disadvantages.title}}: {{reviewBody.disadvantages.text}}</p>
+            </div>
+            <div class="review-images">
+                {{#each reviewBody.images}}
+                <img src="{{this}}" alt="Review Image">
+                {{/each}}
+            </div>
+            <div class="comments">
+                <h4>Коментарі</h4>
+                {{#each reviewBody.coments}}
+                <div class="comment">
+                    <p>{{userName}}</p>
+                    <p>{{date}}</p>
+                    <p>{{text}}</p>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+
+<hr class=" my-5">
+
+<div class="card text-bg-success">
+    <h2 class="text-center">{{service.title}}</h2>
+    <p class="text-center">{{service.description}}</p>
+    <div class="text-center">
+        {{#each service.buttons}}
+        <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+        {{/each}}
+    </div>
+</div>
+<hr class="my-5">
+
+<footer>
+    <table class="table">
+        <tbody>
+            {{#each footer}}
+            <tr>
+                {{#each this}}
+                <td><a href="{{link}}" class="footer-link">{{text}}</a></td>
+                {{/each}}
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</footer>
+
+
+
+
+</body>

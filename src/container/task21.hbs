@@ -1,0 +1,111 @@
+<body>
+   <div class="display-1 text-center">JavaScript</div>{{#with heading}}
+   <hr>
+         {{#with main}}
+            {{!-- <p class="text-muted">{{title}}</p>  --}}
+            <p class="text-muted">{{text}}</p>
+            {{#with button_text}}
+                 <button class="btn btn-primary"><h4>{{solid}}</h4></button> 
+                 <br>
+                 <br>
+                  <button class="btn btn-outline-primary"><h4>{{outline}}</h4></button>
+            {{/with}}
+         {{/with}}
+<hr>
+
+         <div class="display-2 text-center">Stack Overflow</div>{{#with second}}
+                  {{!-- <p class="text-text-secondary">Title: {{title}}</p> --}}
+                  <p class="text-text-secondary">{{text}}</p>
+                  {{#with button_text}}
+                  <button class="btn btn-secondary"><h4>{{solid}}</h4>
+                  </button>
+                  <br>
+                  <br>
+                  <button class="btn btn-outline-secondary"><h4>{{outline}}</h4>
+                  </button>
+                  {{/with}}
+             {{/with}}
+<hr>  
+
+            <div class="display-3 text-center">JavaScript Weekly</div>{{#with subblock}}
+            {{!-- <p class="text-text-secondary">Title: {{title}}</p> --}}
+            <p>{{text}}</p>
+            {{#with button_text}}
+            <button class="btn btn-dark">
+               <h4>{{solid}}</h4>
+            </button>
+            <br>
+            <br>
+            <button class="btn btn-outline-dark">
+               <h4>{{outline}}</h4>
+            </button>
+            {{/with}}
+            {{/with}}
+{{/with}}
+<hr>
+
+
+   <div class="display-1 text-capitalize">HTML</div>{{#with nested_display}}
+   {{!-- <p class="text-primary">title: {{title}}</p> --}}
+   <b>{{#with children_display}}</b>
+   <p class="display-4">{{title}}</p>
+   <p>{{text}}</p>
+      {{#with button}}
+            <button class="btn btn-outline-warning"><h4>{{text}}</h4></button>
+            {{/with}}
+         {{/with}}
+
+      <h6>{{header_text}}</h6>
+
+               {{#with button}}
+               <button class="btn btn-outline-info">
+                  <h4>{{text}}</h4>
+               </button>
+               {{/with}}
+      {{/with}}
+      <hr>
+
+   <p class="text text-uppercase text-center text-muted">{{#with paragraph}}</p>
+   <div class="card">
+   {{!-- <p class="card-body">paragraph</p> --}}
+   <p class="display-6 ">{{title}}</p>
+   <p>{{text}}</p>
+   </div>
+   <br>
+   <hr>
+      {{#with button}}
+       <a href="https://google.com/"><b class="btn text-info"> {{text}}</b></a> 
+      {{/with}}
+      <br>
+            <b class=""></b>{{#each list_name}} <br>
+<ul>
+     <li> <a href="https://google.com/"><b class="btn text-info">
+               {{text}}
+            </b></a>           
+      {{/each}}
+      </li>
+</ul>
+{{/with}}
+
+            
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+</body>

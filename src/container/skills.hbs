@@ -3,7 +3,7 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<body>
     {{#with main}}
     <main>
         <section>
@@ -22,9 +22,7 @@
                    (зараз вивчаемо)
                    {{/if}}
                 {{/unless}}
-                {{!-- {{name}} ({{point}}) 
-                {{#if isTop}} (top) {{/if}}
-                {{#unless point includeZero=true}} (Hе вивчаемо) {{/unless}} --}}
+               
             </li>
             {{/each}}
         </ul>
@@ -35,7 +33,7 @@
             <ul>
                 {{#each hobbies}}
                 <li>
-                    {{!-- {{name}} ({{isMain}}) --}}
+                 
                     {{name}}
                     {{#if isMain includeZero=true}} {{true}} {{/if}}
                     {{#if isMain}} (TOP) {{/if}}                                  
@@ -50,7 +48,7 @@
     </main>
     {{/with}}
 
-</div>
+</body>
 
 {{!-- 
     Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs

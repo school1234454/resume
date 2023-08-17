@@ -1,0 +1,82 @@
+<body>
+{{#with info}}
+    <h2>Apple MacBook</h2>
+    <b>Name: {{name}}</b><br>
+    <b>Description: {{description}}</b><br>
+    <b>Price: {{price}}</b><br>
+    <b>Category: {{category}}</b><br>
+    <hr>
+    {{#with features}}
+        <b>Processor{{#with processor}}</b>
+        <li>brand: {{brand}}</li>
+        <li>model: {{model}}</li>
+        <li>speed: {{speed}}</li>
+        <li>cores: {{cores}}</li>
+        <li>cache: {{cache}}</li>        
+                   {{/with}}
+                   <br>
+                   <hr>
+        <b>Memory{{#with memory}}</b>
+        <li>type: {{type}}</li>
+        <li>size: {{size}}</li>
+        <li>speed: {{speed}}</li>        
+                  {{/with}}
+                  <br>
+                  <hr>
+        <b>Storage{{#with storage}}</b>
+        <li>type: {{type}}</li>
+        <li>size: {{size}}</li>        
+                 {{/with}}
+                  <br>
+                  <hr>
+        <b>Display{{#with display}}</b>
+        <li>size: {{size}}</li>
+        <li>resolution: {{resolution}}</li>
+        <li>color space: {{color_space}}</li>
+        <li>brightness: {{brightness}}</li>
+        <li>refresh rate: {{refresh_rate}}</li>
+                      {{/with}}
+                      <br>
+                      <hr>
+        <b>Graphics{{#with graphics}}</b>
+        <li>brand: {{brand}}</li>
+        <li>model: {{model}}</li>
+        <li>memory: {{memory}}</li>
+                    {{/with}}
+                    <br>
+                    <hr>                            
+            <b>Ports{{#each ports}}</b>    
+            <li>type: {{type}}</li>
+            <li>count: {{count}}</li>
+            <ul>{{#each features}}
+                <li>{{this}}</li>
+                    {{/each}}</ul>     
+            {{/each}}
+                    <br>
+                    <hr>
+        <b>Battery{{#with battery}}</b>
+        <li>type: {{type}}</li>
+        <li>capacity: {{capacity}}</li>
+        <li>life: {{life}}</li>
+           {{/with}}
+                    <br>
+                    <hr> 
+    <b>weight: {{weight}}</b>
+                <br>
+                <hr>
+                <b>Dimensions{{#with dimensions}}</b>
+                <li>width: {{width}}</li>
+                <li>depth: {{depth}}</li>                
+                {{/with}}
+                <br>
+                <hr>
+    <b>Operating System: {{operating_system}}</b>
+                    <br>
+                    <hr>
+            <b>Accessories{{#each accessories}}</b>
+            <li>name: {{name}}</li>
+            <li>price: {{price}}</li> <br>                   
+                   {{/each}}            
+    {{/with}}  
+{{/with}}
+</body>

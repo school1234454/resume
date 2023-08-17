@@ -1,0 +1,55 @@
+<body>
+    <h1>{{name}}</h1>    
+        {{#each users}}
+       
+            <h2>User ID: {{id}}</h2>
+            <li>Name: {{name}}</li>
+            <li>Gender: {{gender}}</li>
+            <li>Age: {{age}}</li>            
+            
+                
+                <h3>Friends:{{#each friends}}</h3>
+                
+                    <li>Friend ID: {{id}}</li>
+                    <li>Name: {{name}}</li>
+                    <li>Gender: {{gender}}</li>
+                    <li>Age: {{age}}</li>
+
+                    {{#if mutual_friends}}
+                    <h4>Mutual Friends:</h4>
+                   
+                        {{#each mutual_friends}}
+                        <li>
+                            <li>Mutual Friend ID: {{id}}</li>
+                            <li>Name: {{name}}</li>
+                            <li>Gender: {{gender}}</li>
+                            <li>Age: {{age}}</li><hr>
+                   <b> Mutual friends:</b> {{#each mutual_friends}}
+                            <li> ID: {{id}}</li>
+                            <li>Name: {{name}}</li>
+                            <li>Gender: {{gender}}</li>
+                            <li>Age: {{age}}</li>
+                            {{/each}}
+                        </li>
+                        {{/each}}
+                    
+                    {{/if}}                                   
+           
+                <h3>Groups:{{#each groups}} </h3>
+                    <li>Group ID: {{id}}</li>
+                    <li>Name: {{name}}</li>
+                    <li>Description: {{description}}</li>                              
+                   
+                       <b>Members {{#each members}}</b>
+                       
+                            <li> Member ID: {{id}}</li>
+                        <li> Name: {{name}}</li>
+                        <li> Gender: {{gender}}</li>
+                        <li>  Age: {{age}}</li><br>
+                     
+                     {{/each}}                 
+              
+                {{/each}}           
+            {{/each}}       
+        {{/each}}    
+</body>

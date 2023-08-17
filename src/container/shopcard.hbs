@@ -1,0 +1,130 @@
+<body>
+<div>
+    <h2>{{header.title}}</h2>
+    <a href="{{header.button.link}}" class="btn btn-primary">{{header.button.text}}</a>
+</div>
+<hr class="my-5">
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Назва</th>
+                <th>Опис</th>
+                <th>Ціна</th>
+                <th>Кількість</th>
+                <th>Дії</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each goodsBlock}}
+            <tr>
+                <td><img src="{{image}}" alt="{{name}}" class="cart-item-image"></td>
+                <td>{{name}}</td>
+                <td>{{description}}</td>
+                <td>{{price.value}}</td>
+                <td>{{amount}}</td>
+                <td>
+                    {{#each buttons}}
+                    <button
+                        class="btn {{#if isPrimary}}btn-primary{{/if}}{{#if isDanger}}btn-danger{{/if}}">{{text}}</button>
+                    {{/each}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <div class="card">
+        <div class="col-2">
+            <h3 class="cart-title">{{total.title}}</h3>
+            <b class="cart-body">{{total.amount}}</b>
+            <p class="cart-body">{{total.delivery}}</p>
+            <div class="cart-total-buttons cart-footer">
+                {{#each total.buttons}}
+                <a href="{{link}}"
+                    class="btn {{#if isSuccess}}btn-success{{/if}}{{#if isOutline}}btn-outline-success{{/if}}">{{text}}</a>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="my-5">
+<div class="row">
+    {{#each goodsOtherBlock.cards}}
+    <div class="col-md-4">
+        <div class="card">
+            <img src="{{image}}" class="card-img-top" alt="{{title}}">
+            <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+                <p class="card-text">{{description}}</p>
+                {{#if isHot}}
+                <span class="badge bg-danger">Hot</span>
+                {{/if}}
+                {{#if isNew}}
+                <span class="badge bg-primary">New</span>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<hr class="my-5">
+
+<div class="card text-bg-dark">
+    <h2>{{subscribe.header}}</h2>
+    <p>{{subscribe.description}}</p>
+    <div class="col-2 ">
+        {{#each subscribe.buttons}}
+        <a href="{{link}}" class="btn btn-primary my-1">{{text}}</a>
+        {{/each}}
+    </div>
+</div>
+
+<hr class="my-5">
+
+
+    <table class="col-4">
+        {{#each footer}}
+        <tr>
+            {{#each this}}
+            <td><a href="{{link}}">{{text}}</a></td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </table>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

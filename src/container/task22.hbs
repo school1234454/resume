@@ -1,0 +1,88 @@
+<body>
+   <div class="text-center"><h1>InnovaMind</h1>{{#with page_header}}
+      {{!-- <p class="text-secondary">Title: {{title}}</p> --}}
+      <p class="text-secondary"> {{description}}</p>
+{{/with}}
+</div>
+
+<div class="display-8 card">  {{#with section}}
+<b class="text-end "> {{#with about_us}}</b>
+<div class="text-end "> {{#with title_list}}</div>
+
+<p class="display-6 text-end"> {{main}}</p>
+<p class="text-end">{{sub}}</p>
+{{/with}}
+<div>
+{{#with button}}
+<button class="btn btn-outline-info">   <h4>{{text}}</h4>
+</button>
+{{/with}}
+</div>
+{{/with}}
+</div>
+<br>
+
+
+<div class="card">
+<p class="display-5 text-secondary"> Advantage {{#with advantage}}</p>
+   <p class="display-5 text-secondary">Efficiency {{#with efficiency}}</p>
+   {{!-- <p> {{title}}</p> --}}
+   <p>{{sub_title}}</p>
+   <p>{{description}}</p>
+      <div>
+   <button class="btn btn-outline-warning"><h4>{{button}}</h4>
+   </button>
+   {{/with}}
+   </div>
+   </div>
+   </div>
+   <br>
+{{!-- /////////////////////////////////////////////////// --}}
+<div class="card">
+<div class="text-secondary display-4 text-center">Innovation{{#with innovation}}</div>
+{{!-- <p class="text-end">{{title}}</p> --}}
+<p class="text-center">{{sub_title}}</p>
+<p class="text-center">{{description}}</p>
+<div>
+<button class="btn btn-outline-warning">
+   <h4>{{button}}</h4>
+</button>
+</div>
+   {{/with}}
+   </div>
+   <br>
+{{!-- /////////////////////////////////////////////////// --}}
+<div class="card">
+<div class="display-4 text-end text-secondary">Collaboration{{#with collaboration}}</div>
+{{!-- <h6 class="text-center">title {{title}}</h6> --}}
+<p class="text-end">{{sub_title}}</p>
+<p class="text-end">{{description}}</p>
+<div>
+<button class="btn btn-outline-warning">
+   <h4>{{button}}</h4>
+</button>
+</div>
+{{/with}}
+{{/with}}
+</div>
+{{!-- /////////////////////////////////////////////////// --}}
+<br>
+
+                        <div class="card">{{#with agreement}}
+                        <p class="display-5">{{title}}</p>
+
+                        {{#with info}}
+                        <p class="card">{{sub_title}}</p>
+
+                        <div class="">{{#with detail}}</div>
+                        <p>{{text}}</p>
+                        <div>
+                              <button class="btn btn-success">
+                                 <h4>{{button}}</h4>
+                              {{/with}}
+                              {{/with}}
+                           </div>
+                     {{/with}}
+                     </div>
+{{/with}}
+</body>
