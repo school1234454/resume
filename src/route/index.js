@@ -51,7 +51,17 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+
+    heading: {
+      name: {
+        firstname: 'Yevhen',
+        lastname: 'Honchar',
+        project: 'Resume project',
+      },
+    },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -488,8 +498,6 @@ router.get('/js', function (req, res) {
   res.render('js', {
     layout: 'basic',
 
-    headerjs,
-
     types: [
       'Number',
       'String',
@@ -662,7 +670,6 @@ router.get('/car', function (req, res) {
 })
 
 // ================================================================
-module.exports = router
 
 // ================================================================
 
@@ -674,7 +681,6 @@ router.get('/mac', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
     layout: 'basic',
-    headerjs,
 
     info: {
       name: 'Apple MacBook Pro',
@@ -763,7 +769,6 @@ router.get('/mac', function (req, res) {
 // ================================================================
 
 // Підключаємо роутер до бек-енду
-module.exports = router
 
 // ================================================================
 
@@ -947,7 +952,6 @@ router.get('/bootstrap', function (req, res) {
 
 // ================================================================
 // Підключаємо роутер до бек-енду
-module.exports = router
 
 // ================================================================
 
@@ -960,7 +964,6 @@ router.get('/task21', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
     layout: 'basic',
-    layout: 'bootstrap',
 
     heading: {
       main: {
@@ -1028,7 +1031,7 @@ router.get('/task21', function (req, res) {
 // ================================================================
 
 // Підключаємо роутер до бек-енду
-module.exports = router
+
 // ================================================================
 
 // router.get Створює нам один ентпоїнт
@@ -1040,7 +1043,6 @@ router.get('/task22', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task22', {
     layout: 'basic',
-    layout: 'bootstrap',
 
     page_header: {
       title: 'InnovaMind',
@@ -1097,7 +1099,6 @@ router.get('/task22', function (req, res) {
 // ================================================================
 
 // Підключаємо роутер до бек-енду
-module.exports = router
 
 // ================================================================
 
@@ -1363,7 +1364,6 @@ router.get('/task31', function (req, res) {
 // ================================================================
 
 // Підключаємо роутер до бек-енду
-module.exports = router
 
 // ================================================================
 
@@ -1660,7 +1660,6 @@ router.get('/shophome', function (req, res) {
 // ================================================================
 
 // Підключаємо роутер до бек-енду
-module.exports = router
 
 // ================================================================
 
@@ -2036,7 +2035,6 @@ router.get('/shoporder', function (req, res) {
 // ================================================================
 
 // Підключаємо роутер до бек-енду
-module.exports = router
 
 // ================================================================
 
@@ -2292,7 +2290,6 @@ router.get('/shopcard', function (req, res) {
 // ================================================================
 
 // Підключаємо роутер до бек-енду
-module.exports = router
 
 // ================================================================
 
